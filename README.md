@@ -29,7 +29,7 @@ sudo pip3 install bsdiff4
 After MIUI porting process done, see "output" folder for flashable zip.
 
 ### Special thanks to below projects
-https://github.com/xpirt/sdat2img |
-https://github.com/vm03/payload_dumper |
-https://github.com/osm0sis/Android-Image-Kitchen |
-https://ibotpeaches.github.io/Apktool/
+https://github.com/xpirt/sdat2img  
+https://github.com/vm03/payload_dumper  
+https://github.com/osm0sis/Android-Image-Kitchen  
+https://ibotpeaches.github.io/Apktool/  
