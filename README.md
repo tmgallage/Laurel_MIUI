@@ -16,6 +16,7 @@ Recommended operating system is Ubuntu 20.04 and newer.
 Install bellow dependencies:
 
 sudo apt install python3-pip brotli attr default-jre
+
 sudo pip3 install bsdiff4
 
 ## How to build MIUI
