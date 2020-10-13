@@ -4,16 +4,16 @@ This is the public release of MI A3 MIUI builder script developed by tmgallage (
 
 ## Important Directories
 
-1. Laurel_MIUI/BOOT/kernel-dtbo : You can add kernel "Image.gz-dtb" & "dtbo.img".
-2. Laurel_MIUI/BOOT/TWRP : You can add your preferred recovery.img here.
-3. Laurel_MIUI/A3_ROM : Put latest Mi A3 recovery flashable ROM here.
-4. Laurel_MIUI/CC9E_ROM : Put Mi CC9e xiaomi.eu/China ROM here.
+1. Laurel_MIUI/BOOT/kernel-dtbo : You can add kernel "Image.gz-dtb" & "dtbo.img" here.
+2. Laurel_MIUI/BOOT/TWRP        : You can add your preferred recovery.img here.
+3. Laurel_MIUI/A3_ROM           : Put latest Mi A3 recovery flashable ROM here.
+4. Laurel_MIUI/CC9E_ROM         : Put Mi CC9e xiaomi.eu/China recovery flashable ROM here.
 
 ## Requirements
 
 Recommended operating system is Ubuntu 20.04 and newer.
 Install bellow dependencies:
-  sudo apt install python3-pip brotli attr p7zip-full default-jre
+  sudo apt install python3-pip brotli attr default-jre
   sudo pip3 install bsdiff4
 
 ## How to build MIUI
