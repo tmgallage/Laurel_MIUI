@@ -1,4 +1,4 @@
-##### Laurel MIUI Builder #####
+# Laurel MIUI
 
 This is the public release of MI A3 MIUI builder script developed by tmgallage (BITNET).
 
