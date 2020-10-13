@@ -21,7 +21,7 @@ Install bellow dependencies:
 
 1. Put latest Mi A3 recovery flashable stock ROM to "A3_ROM" folder.
 2. Put Mi CC9e recovery flashable xiaomi.eu/China ROM to "CC9E_ROM" folder.
-3. Open terminal in "Laurel MIUI Builder" directory.
+3. Open terminal in "Laurel_MIUI" directory.
 4. Run "sudo ./build-eu.sh" for xiaomi.eu ROM or "sudo ./build-cn.sh" for MIUI China ROM.
 
 After MIUI porting process done, see "output" folder for flashable zip.
