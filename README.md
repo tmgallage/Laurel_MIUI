@@ -17,7 +17,7 @@ Install bellow dependencies:
 &nbsp;&nbsp;&nbsp;&nbsp;sudo apt install python3-pip brotli attr default-jre  
 &nbsp;&nbsp;&nbsp;&nbsp;sudo pip3 install bsdiff4
 
-## How to build MIUI
+## How to Build MIUI
 
 1. Put latest Mi A3 recovery flashable stock ROM to "A3_ROM" folder.
 2. Put Mi CC9e recovery flashable xiaomi.eu/China ROM to "CC9E_ROM" folder.
