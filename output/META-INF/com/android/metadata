@@ -1,0 +1,9 @@
+ota-property-files=metadata:69:284         
+ota-required-cache=0
+ota-type=BLOCK
+post-build=Xiaomi/laurus/laurus:9/PKQ1.190416.001/9.12.5:user/release-keys
+post-build-incremental=9.12.5
+post-sdk-level=28
+post-security-patch-level=2019-10-01
+post-timestamp=1575482027
+pre-device=laurus

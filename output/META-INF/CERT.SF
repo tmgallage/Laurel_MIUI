@@ -1,0 +1,94 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: js7nbWcnouvOSp4LrhDTUmu1GDM=
+Created-By: 1.0 (Android SignApk)
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: fD5vPAcsNZAcQZ+yBYhvdDf3XNs=
+
+Name: firmware-update/BTFM.bin
+SHA1-Digest: rzlOikRrvKumQWsK/rG+jybNYSQ=
+
+Name: firmware-update/km4.mbn
+SHA1-Digest: U9OZwrpTDqd9OhWaAFqXgnHzqL8=
+
+Name: system.patch.dat
+SHA1-Digest: 774VWw1Wa8Y+IPKHHCeM6N//yzE=
+
+Name: firmware-update/storsec.mbn
+SHA1-Digest: /p71amaZI1DUS6MW4y/f2uDu5NM=
+
+Name: firmware-update/xbl_config.elf
+SHA1-Digest: QGck/ngitig8f3m17+aVI05EURM=
+
+Name: firmware-update/uefi_sec.mbn
+SHA1-Digest: Gq8ItInK8xz+SbDugBOYePBbcNA=
+
+Name: system.transfer.list
+SHA1-Digest: 4t1w9ozzJjribAOupMaLjdHh7S4=
+
+Name: firmware-update/abl.elf
+SHA1-Digest: qsHndmWMyt9XM+8ZvNv83kn/FIw=
+
+Name: firmware-update/devcfg.mbn
+SHA1-Digest: HXwmKihEH2bBKl65GO/15hiXJsM=
+
+Name: firmware-update/dspso.bin
+SHA1-Digest: 5PL8AV+hDJtOnTVZywgVRXfwKew=
+
+Name: firmware-update/imagefv.elf
+SHA1-Digest: boZRMlFNQwGAdU11mTpS0l47+Ck=
+
+Name: META-INF/com/android/metadata
+SHA1-Digest: KDNi0w9zmiAT0nfEgognJcYP1Ec=
+
+Name: firmware-update/xbl.elf
+SHA1-Digest: H3XKa6fTd/9gZlSIW/4lYgj6Xy4=
+
+Name: firmware-update/dtbo.img
+SHA1-Digest: 7wupYd9aqbYzIOmGsCU4fRzjIec=
+
+Name: firmware-update/NON-HLOS.bin
+SHA1-Digest: QbNKAvbJh4EjH51Ze30AqjVr1gU=
+
+Name: firmware-update/cmnlib64.mbn
+SHA1-Digest: jXx8Ts5lFn9mtq3fdTJ6iGkOCyk=
+
+Name: firmware-update/qupv3fw.elf
+SHA1-Digest: EqjSQcKY3PD0fFwsVpE9ozcEfTc=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: 9m4Es5j9kMJMvsyon0FDf+oRmP0=
+
+Name: vendor.patch.dat
+SHA1-Digest: FGxh8AKe7Jf6bDNWX6tLn6TB/xA=
+
+Name: firmware-update/hyp.mbn
+SHA1-Digest: RWYi9J/p+nPVqAelIoa/oKb7KVo=
+
+Name: vendor.new.dat.br
+SHA1-Digest: ZlawtRfYvmAsmYNsZIBl25t4T9g=
+
+Name: boot.img
+SHA1-Digest: 7jKJL2fuj/jbQBq//mT/qkkD4hI=
+
+Name: firmware-update/vbmeta.img
+SHA1-Digest: na9omzCiciFOC43XoTe2DG0dBEE=
+
+Name: vendor.transfer.list
+SHA1-Digest: NYx9tbxKcPoDn2BvEzXbBMPReFE=
+
+Name: firmware-update/rpm.mbn
+SHA1-Digest: gzA57E7m80DHlGVrCdZBpWpRVXQ=
+
+Name: system.new.dat.br
+SHA1-Digest: Hc6wzbRKJ9BynxXoHkz6ja9ZMxw=
+
+Name: firmware-update/tz.mbn
+SHA1-Digest: pI5tnZozMMUoqXwrWcgcmk5rRjE=
+
+Name: firmware-update/cmnlib.mbn
+SHA1-Digest: SwGO+oZcE5rdFe4gHVRjizLTLuI=
+
+Name: META-INF/com/xiaomieu/xiaomieu.sh
+SHA1-Digest: LEV+jLU7T7cgJfIPjBWpDYcZebI=
+

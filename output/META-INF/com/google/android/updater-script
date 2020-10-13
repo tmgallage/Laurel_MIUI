@@ -1,0 +1,124 @@
+#ASSERT
+#UNMOUNT
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+ifelse(is_mounted("/system"), unmount("/system"));
+show_progress(1.000000, 0);
+ui_print(" ");
+ui_print(" ");
+ui_print("*******************************************");
+ui_print("*       MIUI 12 for Mi A3 By BITNET       *");
+ui_print("*            Based on Mi CC9e             *");
+ui_print("*******************************************");
+ui_print("*                                         *");
+ui_print("*-Checking config ...                     *");
+ui_print("*                                         *");
+package_extract_dir("install", "/tmp/install");
+set_metadata_recursive("/tmp/install", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);
+set_metadata_recursive("/tmp/install/bin", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0755);
+run_program("/tmp/install/bin/configure.sh");
+#MOUNT
+mount("ext4", "EMMC", file_getprop("/tmp/config", "vendor"), "/vendor");
+run_program("/tmp/install/bin/encryption.sh");
+#UNMOUNT
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+ui_print("*-Formatting system ...                   *");
+ui_print("*                                         *");
+format("ext4", "EMMC", file_getprop("/tmp/config", "system"), "0", "/system");
+ui_print("*-Formatting vendor ...                   *");
+ui_print("*                                         *");
+format("ext4", "EMMC", file_getprop("/tmp/config", "vendor"), "0", "/vendor");
+set_progress(0.200000);
+#MOUNT
+ifelse(is_mounted("/vendor"), "", mount("ext4", "EMMC", file_getprop("/tmp/config", "vendor"), "/vendor"));
+ifelse(is_mounted("/system"), "", mount("ext4", "EMMC", file_getprop("/tmp/config", "system"), "/system"));
+ui_print("*-Installing system ...                   *");
+package_extract_file("system.img", file_getprop("/tmp/config", "system"));
+set_progress(0.400000);
+ui_print("*                                         *"); 
+ui_print("*-Installing vendor ...                   *");
+package_extract_file("vendor.img", file_getprop("/tmp/config", "vendor"));
+set_progress(0.600000);
+ui_print("*                                         *"); 
+ui_print("*-Installing vbmeta ...                   *"); 
+package_extract_file("firmware-update/vbmeta.img", "/dev/block/by-name/vbmeta_a");
+package_extract_file("firmware-update/vbmeta.img", "/dev/block/by-name/vbmeta_b");
+set_progress(0.700000);
+ui_print("*                                         *"); 
+ui_print("*-Installing dtbo ...                     *");
+package_extract_file("firmware-update/dtbo.img", "/dev/block/by-name/dtbo_a");
+package_extract_file("firmware-update/dtbo.img", "/dev/block/by-name/dtbo_b");
+set_progress(0.800000);
+ui_print("*                                         *");  
+ui_print("*-Installing boot ...                     *"); 
+package_extract_file("boot.img", "/dev/block/by-name/boot_a");
+package_extract_file("boot.img", "/dev/block/by-name/boot_b");
+set_progress(0.900000);
+ui_print("*                                         *");  
+ui_print("*-Updating firmware ...                   *"); 
+package_extract_file("firmware-update/cmnlib64.img", "/dev/block/bootdevice/by-name/cmnlib64");
+package_extract_file("firmware-update/imagefv.img", "/dev/block/bootdevice/by-name/imagefv");
+package_extract_file("firmware-update/cmnlib.img", "/dev/block/bootdevice/by-name/cmnlib");
+package_extract_file("firmware-update/hyp.img", "/dev/block/bootdevice/by-name/hyp");
+package_extract_file("firmware-update/keymaster.img", "/dev/block/bootdevice/by-name/keymaster");
+package_extract_file("firmware-update/tz.img", "/dev/block/bootdevice/by-name/tz");
+package_extract_file("firmware-update/xbl_config.img", "/dev/block/bootdevice/by-name/xbl_config");
+package_extract_file("firmware-update/bluetooth.img", "/dev/block/bootdevice/by-name/bluetooth");
+package_extract_file("firmware-update/uefisecapp.img", "/dev/block/bootdevice/by-name/uefisecapp");
+package_extract_file("firmware-update/modem.img", "/dev/block/bootdevice/by-name/modem");
+package_extract_file("firmware-update/qupfw.img", "/dev/block/bootdevice/by-name/qupfw");
+package_extract_file("firmware-update/abl.img", "/dev/block/bootdevice/by-name/abl");
+package_extract_file("firmware-update/dsp.img", "/dev/block/bootdevice/by-name/dsp");
+package_extract_file("firmware-update/devcfg.img", "/dev/block/bootdevice/by-name/devcfg");
+package_extract_file("firmware-update/storsec.img", "/dev/block/bootdevice/by-name/storsec");
+package_extract_file("firmware-update/xbl.img", "/dev/block/bootdevice/by-name/xbl");
+package_extract_file("firmware-update/rpm.img", "/dev/block/bootdevice/by-name/rpm");
+package_extract_file("firmware-update/cmnlib64.img", "/dev/block/bootdevice/by-name/cmnlib64bak");
+package_extract_file("firmware-update/imagefv.img", "/dev/block/bootdevice/by-name/imagefvbak");
+package_extract_file("firmware-update/cmnlib.img", "/dev/block/bootdevice/by-name/cmnlibbak");
+package_extract_file("firmware-update/hyp.img", "/dev/block/bootdevice/by-name/hypbak");
+package_extract_file("firmware-update/keymaster.img", "/dev/block/bootdevice/by-name/keymasterbak");
+package_extract_file("firmware-update/tz.img", "/dev/block/bootdevice/by-name/tzbak");
+package_extract_file("firmware-update/xbl_config.img", "/dev/block/bootdevice/by-name/xbl_configbak");
+package_extract_file("firmware-update/uefisecapp.img", "/dev/block/bootdevice/by-name/uefisecappbak");
+package_extract_file("firmware-update/qupfw.img", "/dev/block/bootdevice/by-name/qupfwbak");
+package_extract_file("firmware-update/abl.img", "/dev/block/bootdevice/by-name/ablbak");
+package_extract_file("firmware-update/devcfg.img", "/dev/block/bootdevice/by-name/devcfgbak");
+package_extract_file("firmware-update/storsec.img", "/dev/block/bootdevice/by-name/storsecbak");
+package_extract_file("firmware-update/xbl.img", "/dev/block/bootdevice/by-name/xblbak");
+package_extract_file("firmware-update/rpm.img", "/dev/block/bootdevice/by-name/rpmbak");
+ui_print("*                                         *"); 
+ui_print("*-Wiping dalvik cache ...                 *");
+delete_recursive("/data/dalvik-cache");
+ui_print("*                                         *");
+#UNMOUNT
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+ifelse(is_mounted("/system"), unmount("/system"));
+#Post installation scripts
+mount("ext4", "EMMC", file_getprop("/tmp/config", "system"), "/system");
+mount("ext4", "EMMC", file_getprop("/tmp/config", "vendor"), "/vendor");
+run_program("/tmp/install/bin/installer.sh");
+
+package_extract_file("META-INF/com/xiaomieu/busybox", "/tmp/busybox");
+run_program("/sbin/chmod", "777", "/tmp/busybox");
+
+run_program("/tmp/busybox", "chmod", "660", "/data/data/com.google.android.gms/databases/dg.db");
+run_program("/tmp/busybox", "rm", "-rf", "/data/data/com.google.android.gms/app_dg_cache");
+run_program("/tmp/busybox", "rm", "-f", "/data/data/com.google.android.gms/databases/dg.db");
+package_extract_file("META-INF/com/xiaomieu/dg.db", "/data/data/com.google.android.gms/databases/dg.db");
+run_program("/tmp/busybox", "chmod", "444", "/data/data/com.google.android.gms/databases/dg.db");
+
+package_extract_file("META-INF/com/xiaomieu/xiaomieu.sh", "/tmp/xiaomieu.sh");
+run_program("/sbin/sh", "/tmp/xiaomieu.sh");
+ifelse(is_mounted("/vendor"), unmount("/vendor"));
+ifelse(is_mounted("/system"), unmount("/system"));
+#GApps
+package_extract_dir("GApps", "/tmp/GApps");
+run_program("/sbin/busybox", "unzip", "/tmp/GApps/GApps.zip", "META-INF/com/google/android/*", "-d", "/tmp/GApps");
+run_program("/sbin/busybox", "sh", "/tmp/GApps/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/GApps/GApps.zip");
+delete_recursive("/tmp/GApps");
+set_progress(1.000000);
+ui_print("*                                         *");
+ui_print("*******************************************");
+ui_print("*          Installation Complete!         *");
+ui_print("*******************************************");
+ui_print(" ");
