@@ -14,8 +14,8 @@ This is the public release of MI A3 MIUI builder script developed by tmgallage (
 Recommended operating system is Ubuntu 20.04 and newer.
 
 Install bellow dependencies:  
-   sudo apt install python3-pip brotli attr default-jre  
-   sudo pip3 install bsdiff4
+&nbsp;&nbsp;sudo apt install python3-pip brotli attr default-jre  
+&nbsp;&nbsp;sudo pip3 install bsdiff4
 
 ## How to build MIUI
 
