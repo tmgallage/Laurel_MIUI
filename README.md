@@ -1,6 +1,6 @@
 # Laurel MIUI
 
-This is the public release of MI A3 MIUI builder script developed by tmgallage (BITNET). This script can use to port MI CC9e Xiaomi.eu & MIUI China firmwares to Mi A3. Anyone can freely use this and develop this. Please be kind enough to give proper credit.
+This is the public release of MI A3 MIUI builder script developed by tmgallage (BITNET). This script can use to port MI CC9e Xiaomi.eu & MIUI China firmwares to Mi A3. Anyone can freely use this and develop this. Please be kind enough to give proper credit to tmgallage (BITNET).
 
 ## Important Directories
 
