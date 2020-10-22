@@ -129,6 +129,7 @@ rm -rf /mnt/A3_ROM/*
 cp -Raf /mnt/Extra_System_Files/* /mnt/A3_ROM/
 cp -Raf /mnt/CC9E_ROM/* /mnt/A3_ROM/
 sed -i '/ro.build.version.incremental/s/$/-BITNET/' /mnt/A3_ROM/system/build.prop
+sed -i '/ro.build.version.incremental./ { s/QFMCNXM-BITNET/BITNET/g; }' /mnt/A3_ROM/system/build.prop
 sed -i '/ro.product.system.model/ a \ro.product.model=MI A3\' /mnt/A3_ROM/system/build.prop
 sed -i "/ro.product.system.model=/c\ro.product.system.model=MI A3" /mnt/A3_ROM/system/build.prop
 echo 'ro.netflix.bsp_rev=Q6125-17995-1' >> /mnt/A3_ROM/system/build.prop
