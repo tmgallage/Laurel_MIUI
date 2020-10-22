@@ -1,7 +1,14 @@
 #!/sbin/sh
 
-
 # Start BITNET MIUI post installation script
+
+STRING="ro.system.build.version.incremental=V12."
+FILE="/system/system/build.prop"
+
+if  grep -q "$STRING" "$FILE" ; then
+    echo Nothing to do
+else
+
 # Install Updater
 cp -r /tmp/install/bin/MiuiUpdater /system/system/priv-app/
 
@@ -18,6 +25,8 @@ chmod 755 /system/system/priv-app/MiuiAod
 chmod 644 /system/system/priv-app/MiuiAod/MiuiAod.apk
 chown -hR root:root /system/system/priv-app/MiuiAod
 chown -hR root:root /system/system/priv-app/MiuiAod/MiuiAod.apk
+
+fi
 
 # Disable encryption if was disabled before
 if [ -f "/tmp/noencrypt" ] 
